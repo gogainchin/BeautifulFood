@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.wrap{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-color: #cc0000;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+   
+    /* display: none; */
+    /* visibility: hidden; */
+}
+.background figure{
+    text-align: center;
+    color: #fff;
+}
+.fade{
+    transition: opacity 1s;
+    opacity: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+/* header */
+header{
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cc0000;
+    color: #fff;
+}
+header img{
+    width: 40px;
+}
+header h1{
+    font-size: 1.2rem;
+    padding: 5px 0;
+}
+header input{
+    padding: 5px;
+    width: 300px;
+}
+/* subheader */
+.subheader{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto 16px auto;
+    padding: 10px;
+    background-color: rgb(124, 0, 0);
+    color: #fff;
+    /*水平阴影、垂直阴影、模糊距离、颜色 */
+    box-shadow: 5px 5px 10px #888;
+}
+.subheader h3,.subheader p{
+    font-size: 14px;
+    margin: 5px;
+}
+.subheader img{
+    /* 图片自定义宽度，高度也跟着缩放 */
+    width: 40px;
+}
+/* container */
+.container{
+    width: 90%;
+    padding: 0 10px;
+    margin: 0 auto;
+   /* 二维布局，适合用grid */
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   grid-gap:10px
+}
+.container>div{
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.container>div h4{
+    font-weight: bold;
+    color: #000;
+}
+.container>div p{
+    font-size: 14px;
+    color:rgb(124,0,0);
+    padding: 5px 0;
+}
+.container>div img{
+    width: 30px;
+    align-self: flex-end;
+}
+/* footer */
+footer{
+    /* 绝对定位和固定定位后的元素脱离文档流，不再默认占据整行宽度，而是由内容撑开 */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+footer>div{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+footer figure{
+    text-align: center;
+}
+footer figure img{
+    width: 25px;
+}
